@@ -1,0 +1,90 @@
+<%=content_for :title, "Gritty"%>
+<nav>
+    
+</nav>
+
+<h1>Gritty Spanish</h1>
+
+<button onclick="setCurTime(139.3)" type="button">139 sec</button> 
+<button onclick="setCurTime(169.5)" type="button">170 sec</button> 
+<button onclick="setCurTime(200.23)" type="button">201 sec</button> 
+
+<button onclick="setCurTime(225.15)" type="button">225 sec</button>
+<button onclick="setCurTime(239)" type="button">239 sec</button>
+<button onclick="setCurTime(255.2)" type="button">254.8 sec</button>
+<button onclick="setCurTime(261.3)" type="button">261 sec</button>
+<br> 
+<button onclick="goBack(3)" type="button">go back 3 segundos</button><br> 
+<button onclick="getCurTime()" type="button">Get current time position</button>
+</br>
+</br>
+
+<%= audio_tag "06 Yankee Stadium Concert- El concierto en el estadio de los Yankees.mp3", id:"sound", :size => "320x240", :controls => true %>
+
+<script>
+var vid = document.getElementById("sound");
+vid.volume = 0.2;
+
+function goBack(n){
+    sound.currentTime -= n;
+    sound.play()
+}
+
+function setCurTime(n) { 
+    sound.currentTime=n;
+    sound.play()
+} 
+
+function getCurTime() { 
+    alert(sound.currentTime);
+} 
+
+
+
+
+
+</script> 
+
+<iframe src="https://docs.google.com/viewer?url=http://stash.reaper.fm/29909/Gritty06Yankee.pdf&embedded=true" 
+width="100%" height="800" frameborder="0" >
+<p>Your browser does not support iframes.</p>
+</iframe>
+
+
+<p style = 'font-size:25px;'>
+    Luis: Hola Yazmin, ¿cómo tú estás esta mañana? Te
+ves cansada y con sueño, chica, ¿está todo bien?
+
+Yazmin: La misma mierda, diferente día, es lunes,
+¡odio los lunes! Lo digo una vez, y lo diré de nuevo,
+¡odio los lunes!
+
+
+Luis: Sí, yo sé que los odio, todos odiamos los lunes.
+De todos modos, ¿cómo fue el concierto de Romeo
+Santos el sábado en el estadio de los Yankees? ¿Te
+fuiste? Porque, me hablabas de eso durante meses.
+Vi que un montón de gente bajó en la parada del
+estadio de los Yankees, no era la gente normal que
+frecuenta los Yankees. Había una gran cantidad de
+mujeres bellas, ¡oh Dios mío!
+
+</p>
+
+<p style = 'font-size:25px;'>Pensé que sabias más del concierto que yo,
+sobre todo porque tienes el álbum y sabes las
+canciones. Esas entradas se agotaron rápidamente
+como pan caliente. Pensé que hubieras comparado
+tu entrada y me acompañaras. Tuve la suerte de
+conseguir una entrada. Porque yo tengo un primo
+que trabaja en la taquilla, y me consiguió  cuatro entradas, que suerte Ah?</p>
+</br>
+<button onclick="setCurTime(283)" type="button">Set time position to 283 seconds</button><br> 
+<button onclick="setCurTime(288.3)" type="button">Set time position to 288 seconds</button><br> 
+<p style = 'font-size:25px;'>¿Y no pensaste en mi verdad? ¡Deberías haber
+guardado una para mí también, Yazmin!
+
+Ay!, deja de hacerme sentir mal, pensé que
+ya tenías una entrada para el concierto ¡por favor!
+
+sí, cómo no.</p>

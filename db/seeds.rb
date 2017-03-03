@@ -1,0 +1,8 @@
+@obj = Objective.create(title: 'Side chain EQ', category: 'Beats' )
+@obj = Objective.create(title: 'Kontakt Slice', category: 'Beats' )
+@obj = Objective.create(title: 'Kontakt Vocal Chops from Newtone', category: 'Beats' )
+@obj = Objective.create(title: 'Reverse Snare and Crash', category: 'Beats' )
+@obj = Objective.create(title: 'Automation Item on each track', category: 'Beats' )
+@obj = Objective.create(title: 'Reggae snare delay', category: 'Beats' )
+@obj = Objective.create(title: 'Automate reverb, pitch, filter build up', category: 'Beats' )
+@obj = Objective.create(title: 'Bridge', category: 'Beats' )
