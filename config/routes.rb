@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+
   resources :projects do
      resources :tasks do
        member do
