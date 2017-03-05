@@ -31,6 +31,13 @@
     background-color:black;
 }
 
+.nav2{
+    width: 100%;
+    line-height: 40px;
+    background-color:black;
+    margin: 40px 0 0 0;
+}
+
 .nav_pages a, .sign_pages a{
     color: white;
     line-height: 40px;
