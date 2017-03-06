@@ -1,6 +1,16 @@
 <h1>Cart#index</h1>
 <p>Find me in app/views/cart/index.html.erb</p>
 
+<%if session[:cart].empty?%>
+<div style='font-size:50px;color:red'>Tu Carta es Vacío</div>
+<%else%>
+
+
+
+
+<%=link_to 'Vacio', cart_clear_path%>
+
+
 <table class='table'>
     <thead>
         <th>Title</th>
@@ -30,3 +40,5 @@
     </tbody>
     
 </table>
+
+<%end%>

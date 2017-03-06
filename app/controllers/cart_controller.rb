@@ -2,6 +2,12 @@ class CartController < ApplicationController
   before_action :set_cart
   
   def clear
+    session[:cart].each do |id, qty|
+      product = Product.find(id)
+      product.instock += qty
+      product.save
+    end
+    
         session[:cart] =nil
         session[:totalAmount] =0
         session[:totalQuantity] =0
