@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170304142839) do
+ActiveRecord::Schema.define(version: 20170306021039) do
 
   create_table "objectives", force: true do |t|
     t.string   "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170304142839) do
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "instock",     default: 5
   end
 
   create_table "projects", force: true do |t|

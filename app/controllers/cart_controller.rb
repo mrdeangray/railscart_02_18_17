@@ -14,8 +14,20 @@ class CartController < ApplicationController
     else
       session[:cart][params[:id]] =1
     end
+    update_inventory(params[:id], -1)
     redirect_to cart_index_path
   end
+
+  def remove_item
+    product = Product.find(params[:id])
+    product = Product.find(params[:id])
+  end
+
+ def update_inventory(id, qty)
+   product = Product.find(id)
+   product.instock +=qty
+   product.save
+ end
 
   def index
   end
