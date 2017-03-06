@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'cart/clear'
+
+  get '/add/:id' =>'cart#add'
+
+  get 'cart/index'
+
   resources :products
 
   resources :projects do
@@ -33,6 +39,8 @@ Rails.application.routes.draw do
   get 'pages/practice1'
 
   get 'pages/practice2'
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
