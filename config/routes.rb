@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'cart/clear'
 
   get '/add/:id' =>'cart#add'
+  
+  get '/remove_item/:id/:qty' =>'cart#remove_item'
 
   get 'cart/index'
 

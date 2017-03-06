@@ -19,8 +19,10 @@ class CartController < ApplicationController
   end
 
   def remove_item
-    product = Product.find(params[:id])
-    product = Product.find(params[:id])
+    session[:cart].delete(params[:id])
+
+    update_inventory(params[:id], params[:qty].to_i )
+    redirect_to cart_index_path
   end
 
  def update_inventory(id, qty)
