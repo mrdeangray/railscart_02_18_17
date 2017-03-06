@@ -14,6 +14,16 @@
             <td><%=product.title%><br/><%=product.description%><br/><%=product.price%></td>
             <td><img src=<%=product.image_url%> class='small-image'></td>
             <td><%=qty%></td>
+
+            <td>
+                <%=form_for(:session, url:"/update_quantity/#{product.id}") do |f|%>
+                    <%=f.number_field(:entered_qty, :value => qty)%>
+                    <%=button_tag(type: :submit, class:'btn btn-primary') do  %>
+                        <i class='fa fa-refresh'>Update</i>
+                    <%end%>
+                <%end%>
+            </td>
+            
             <td><a href=<%="/remove_item/#{product.id}/#{qty}"%>>Remove Item</a></td>
         </tr>
         <%end%>

@@ -24,6 +24,15 @@ class CartController < ApplicationController
     update_inventory(params[:id], params[:qty].to_i )
     redirect_to cart_index_path
   end
+  
+  def update_quantity
+    session[:cart][params[:id]] = params[:session][:entered_qty].to_i
+   product = Product.find(params[:id])
+   product.instock = 5- params[:session][:entered_qty].to_i
+   product.save
+
+    redirect_to cart_index_path
+  end
 
  def update_inventory(id, qty)
    product = Product.find(id)

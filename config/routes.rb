@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/add/:id' =>'cart#add'
   
   get '/remove_item/:id/:qty' =>'cart#remove_item'
+  
+  post 'update_quantity/:id' =>'cart#update_quantity'
 
   get 'cart/index'
 
