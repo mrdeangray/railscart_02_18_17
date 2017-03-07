@@ -36,9 +36,9 @@ Rails.application.routes.draw do
     
   end
 
-  root 'pages#gritty'
+  get 'pages/gritty'
   
-  get 'pages/gritty2'
+  root 'pages#gritty2'
 
   get 'pages/practice1'
 
