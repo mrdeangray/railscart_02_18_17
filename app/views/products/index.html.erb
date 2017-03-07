@@ -1,3 +1,9 @@
+<script>
+  function displayAlert(){
+    alert('este item es indisponible');
+  }
+</script>
+
 <h1>Listing products</h1>
 
 <table class='table'>
@@ -17,9 +23,18 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.description %></td>
+        <% if product.instock > 0%>
         <td><a href='/add/<%= product.id%>'> <img src=<%= product.image_url %>  class='small-image'> </a></td>
         <td><%= number_to_currency(product.price, unit: '$') %></td>
         <td><%= product.instock %></td>
+        <%else%>
+  
+        <td class='completed_task'><%=link_to image_tag(product.image_url, class:'small-image'),'#', :onclick =>'displayAlert();' %></td>
+        
+        
+        <td class=completed_task><%= number_to_currency(product.price, unit: '$') %></td>
+        <td style='color:red'>Indisponible</td>
+        <%end%>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
