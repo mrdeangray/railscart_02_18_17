@@ -21,7 +21,7 @@
         <%session[:cart].each do |id, qty|%>
         <%product = Product.find(id)%>
         <tr>
-            <td><%=product.title%><br/><%=product.description%><br/><%=product.price%></td>
+            <td><%=product.title%><br/><%=product.description%><br/><%=number_to_currency(product.price, unit:'$')%></td>
             <td><img src=<%=product.image_url%> class='small-image'></td>
             <td><%=qty%></td>
 
