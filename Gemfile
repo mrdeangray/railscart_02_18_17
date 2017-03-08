@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
-
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
+gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

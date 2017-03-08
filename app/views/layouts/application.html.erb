@@ -25,13 +25,16 @@
   <%=link_to "Bass", bass_objectives_path%>
   <%=link_to "Shop", products_path%>
   <%=link_to "Cart", cart_index_path%>
-  <%=link_to "DIV", root_path%>
-  <%=link_to "HAML", root_path%>
+  <%=link_to "DIV", pages_practice1_path%>
+  <%=link_to "HAML", pages_practice2_path%>
   </div>
     <div class='sign_pages'>
-  <%=link_to "Sign Up", root_path%>
-  <%=link_to "Sign In", root_path%>
-  <%=link_to "Log Out", root_path%>
+      <%if !user_signed_in?%>
+        <%=link_to "Sign Up", root_path%>
+        <%=link_to "Sign In", root_path%>
+  <% else%>
+      <%=link_to "Log Out", root_path%>
+  <% end%>
   </div>
   
 </nav>

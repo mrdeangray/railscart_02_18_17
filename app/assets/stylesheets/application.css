@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require jquery-ui
+ */
 
 *{
     margin: 0;
@@ -79,34 +82,40 @@ h6{
 }
 
 .top{
-    background-color:black;
-    color:white;
+    color: black;
+    background-color: yellow;
+    height: 40px;
     width:1000px;
-    height: 100px;
+    
 }
 
 .left{
-    background-color:red;
-    color:white;
-    width:200px;
-    height: 400px;
+    color: white;
+    background-color: black;
+    height: 200px;
+    width:100px;
     float:left;
 }
 
 .right{
-    background-color:green;
-    color:white;
-    width:800px;
-    height: 400px;
+    color: white;
+    background-color: red;
+    height: 200px;
+    width:900px;
     float:left;
 }
+
 .bottom{
-    background-color:yellow;
-    color:black;
+    color: white;
+    background-color: green;
+    height: 50px;
     width:1000px;
-    height: 100px;
     float:left;
 }
+
+
+
+
 
 #sound{
     width: 100%;
