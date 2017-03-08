@@ -1,0 +1,19 @@
+%h1 HAML practice
+%p Pages#practice2
+
+%center
+  %div{:style =>'width:1000px'}
+    .top Arriba
+    .left Izquierda
+    .right Derecha
+    .bottom Abajo
+
+%a{:href =>'#'}
+  %img{:src =>'#'}
+  
+%br
+%br/
+-Product.all.each do |p|
+  =p.title
+  %br/
+

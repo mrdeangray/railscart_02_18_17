@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+
+gem 'haml'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'devise'

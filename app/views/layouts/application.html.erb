@@ -11,38 +11,18 @@
 </head>
 <body>
 
-<nav class='nav'>
-  <div class='nav_pages'>
-  <%=link_to "Gritty2", root_path%>
-  <%=link_to "Gritty", pages_gritty_path%>
-  <%=link_to "Objectivos", objectives_path%>
-  <%=link_to "Proj/Tasks", projects_path%>
-  <%=link_to "Todo", root_path%>
-  <%=link_to "Guitar", guitar_objectives_path%>
-  <%=link_to "Piano", piano_objectives_path%>
-  <%=link_to "Drums", drums_objectives_path%>
-  <%=link_to "Beats", beats_objectives_path%>
-  <%=link_to "Bass", bass_objectives_path%>
-  <%=link_to "Shop", products_path%>
-  <%=link_to "Cart", cart_index_path%>
-  <%=link_to "DIV", pages_practice1_path%>
-  <%=link_to "HAML", pages_practice2_path%>
-  </div>
-    <div class='sign_pages'>
-      <%if !user_signed_in?%>
-        <%=link_to "Sign Up", root_path%>
-        <%=link_to "Sign In", root_path%>
-  <% else%>
-      <%=link_to "Log Out", root_path%>
-  <% end%>
-  </div>
-  
-</nav>
 
-<div class='main'>
+
+ <div class='container'>
+
+   <%=render '/layouts/navigation'%>
+  
+   
+   <div class='##main'>
   <%= yield %>
 </div>
-
+   
+ </div>
 
 </body>
 </html>

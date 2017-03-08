@@ -4,13 +4,30 @@
 $("test").addClass("animated bounce");
   });
   
-  $(function() {
-  $('.test').datepicker();
-});
+      $(function() {
+          $( ".datepicker" ).datepicker();
+      });
+      
+      function changeText(){
+          var x = document.getElementsByClassName('top');
+          x[0].innerHTML='no le hacía caso a ellos'
+      }
+      
 </script>
+
+<p>Date: <input type="text" class="datepicker"></p>
+
+<p>Date2: <input type="text" class="datepicker"></p>
+
+<button type='button' onclick='changeText()'>ClickMe</button>
 
 <h1>Pages#practice1</h1>
 <p class="test">Find me in app/views/pages/practice1.html.erb</p>
+
+
+
+  
+
 
 <center>
     <div style='width:1000px'>
