@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  time_marker: 9.99
+
+two:
+  title: MyString
+  time_marker: 9.99

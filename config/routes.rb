@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :markers
+
+  resources :gritty2s
+
   devise_for :users
   get 'cart/clear'
 

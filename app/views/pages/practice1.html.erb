@@ -29,14 +29,19 @@ $(document).ready(function(){
     });
     
     $("#hide2").click(function(){
-        $("p").addClass("completed_task");
+        $("p").addClass("completed_task").toggle();
+        //  $("p").toggle();
     });
-    
+    $("#hide3").click(function(){
+        $("p").toggle();
+        $("h1").addClass("completed_task");
+    });
     // $("p").addClass("completed_task");
 });
 
 
 </script>
+<button id='hide3'>Hide 3</button>
 
 <button id ='hide2'>Hide2</button>
 <p>If you click on the "Hide" button, I will disappear.</p>

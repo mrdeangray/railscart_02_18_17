@@ -1,0 +1,1 @@
+json.partial! "gritty2s/gritty2", gritty2: @gritty2

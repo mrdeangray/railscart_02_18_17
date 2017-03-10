@@ -1,0 +1,1 @@
+json.array! @gritty2s, partial: 'gritty2s/gritty2', as: :gritty2

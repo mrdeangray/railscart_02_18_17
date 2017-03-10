@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307022948) do
+ActiveRecord::Schema.define(version: 20170310203055) do
+
+  create_table "gritty2_time_markers", force: true do |t|
+    t.decimal  "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gritty2s", force: true do |t|
+    t.text     "title"
+    t.decimal  "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "markers", force: true do |t|
+    t.decimal  "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "objectives", force: true do |t|
     t.string   "title"
