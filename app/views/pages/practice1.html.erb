@@ -12,8 +12,41 @@ $("test").addClass("animated bounce");
           var x = document.getElementsByClassName('top');
           x[0].innerHTML='no le hacía caso a ellos'
       }
-      
+
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+    $("#completed").click(function(){
+        $("p").addClass("completed_task");
+    });
+    $("p").click(function(){
+        $(this).hide();
+    });
+    
+    $("#hide2").click(function(){
+        $("p").addClass("completed_task");
+    });
+    
+    // $("p").addClass("completed_task");
+});
+
+
 </script>
+
+<button id ='hide2'>Hide2</button>
+<p>If you click on the "Hide" button, I will disappear.</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="completed">MarkAsCOmpleted</button>
+
+
+<p class='test'>He añadido</p>
+
 
 <p>Date: <input type="text" class="datepicker"></p>
 

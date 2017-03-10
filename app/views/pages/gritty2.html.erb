@@ -1,14 +1,26 @@
-
 <%=content_for :title, "Gritty2"%>
-<nav>
-    
-</nav>
+
+<script>
+  $(document).ready(function() {
+// $(".test").addClass("completed_task");
+$("p").addClass("completed_task");
+  });
+
+  
+</script>
+<p>If you click on the "Hide" button, I will disappear.</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+<p class='test'>He añadido</p>
 
 <h1>Gritty Spanish</h1>
 
 <button onclick="getCurTime()" type="button">Get current time position</button>
 <button onclick="setCurTime(34.3)" type="button">34 sec</button> 
-
+<button onclick="setCurTime(51)" type="button">51 sec</button> 
+<button onclick="setCurTime(73)" type="button">73 sec</button> 
+<button onclick="setCurTime(89.11)" type="button">89 sec</button> 
 <br> 
 
 
