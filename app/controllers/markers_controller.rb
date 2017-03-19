@@ -14,7 +14,11 @@ class MarkersController < ApplicationController
 
   def new
     @marker = Marker.new
-    respond_with(@marker)
+    respond_to do |format|
+      # format.html {redirect_to task_url}
+      format.js
+    end
+    # respond_with(@marker)
   end
 
   def edit
@@ -23,7 +27,8 @@ class MarkersController < ApplicationController
   def create
     @marker = Marker.new(marker_params)
     @marker.save
-    respond_with(@marker)
+    # respond_with(@marker)
+    redirect_to  root_path
   end
 
   def update

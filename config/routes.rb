@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get '/new/:time' =>'marker#new'
+  
   resources :markers
 
   resources :gritty2s

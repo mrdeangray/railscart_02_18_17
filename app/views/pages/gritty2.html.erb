@@ -15,7 +15,7 @@ $("p").addClass("completed_task");
 <p class='test'>He añadido</p>
 
 <h1>Gritty Spanish</h1>
-<%=link_to "New", new_marker_path %>
+<%=link_to "New", new_marker_path, id:"new_link", remote: true %>
 <br/>
 
 <% Marker.all.each do |marker| %>
@@ -55,7 +55,11 @@ function setCurTime(n) {
 } 
 
 function getCurTime() { 
-    alert(sound.currentTime);
+window.open("markers/new?time="+sound.currentTime,"_self")
+// %= remote_function :url => "markers/new", :with => "'time=' + sound.currentTime" %>
+
+    
+     alert(sound.currentTime);
 } 
 
 
