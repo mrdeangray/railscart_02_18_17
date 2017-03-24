@@ -40,13 +40,15 @@ Rails.application.routes.draw do
       get :drums
       get :guitar
       get :beats
+      get :mark_all_as_incomplete
     end
     
   end
 
   get 'pages/gritty'
+  get 'pages/gritty2'
   
-  root 'pages#gritty2'
+  root 'objectives#beats'
 
   get 'pages/practice1'
 

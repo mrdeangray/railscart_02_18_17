@@ -1,10 +1,18 @@
 class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:show, :edit, :update, :destroy, :mark_as_complete, :mark_as_incomplete ]
 
+def mark_all_as_incomplete
+  Objective.where('category = "Beats"').each do |obj|
+   obj.update_attribute(:completed_at, nil)
+   
+ end
+  redirect_to objectives_path, notice: 'Marco todo como incompleto'
+end
+
 
 def mark_as_complete
   @objective.update_attribute(:completed_at, Time.now)
-  redirect_to objectives_path, notice: 'Marco como completo'
+  redirect_to root_path, notice: 'Marco como completo'
 end
 
 def mark_as_incomplete
