@@ -15,6 +15,7 @@ class Gritty2sController < ApplicationController
   def new
     @gritty2 = Gritty2.new
     respond_with(@gritty2)
+    redirect_to pages_gritty2_path 
   end
 
   def edit
